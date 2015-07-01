@@ -89,7 +89,6 @@ color wombat256mod
 
 " Enable syntax highlighting
 " You need to reload this file for the change to apply
-filetype off
 filetype plugin indent on
 syntax on
 
