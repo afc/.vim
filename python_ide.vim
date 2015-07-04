@@ -164,8 +164,8 @@ set wildignore+=*/coverage/*
 " Settings for python-mode
 " Note: I'm no longer using this. Leave this commented out
 " and uncomment the part about jedi-vim instead
-" cd ~/.vim/bundle
-" git clone https://github.com/klen/python-mode
+"" cd ~/.vim/bundle
+"" git clone https://github.com/klen/python-mode
 "" map <Leader>g :call RopeGotoDefinition()<CR>
 "" let ropevim_enable_shortcuts = 1
 "" let g:pymode_rope_goto_def_newwin = "vnew"

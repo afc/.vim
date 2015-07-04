@@ -15,8 +15,8 @@ git clone https://github.com/kien/ctrlp.vim.git
 # Settings for python-mode
 # Note: I'm no longer using this. Leave this commented out
 # and uncomment the part about jedi-vim instead
-cd ~/.vim/bundle
-git clone https://github.com/klen/python-mode
+## cd ~/.vim/bundle
+## git clone https://github.com/klen/python-mode
 
 # Settings for jedi-vim
 cd ~/.vim/bundle
