@@ -21,7 +21,7 @@ set clipboard=unnamed
 
 
 " Mouse and backspace
-set mouse=a  " on OSX press ALT and click
+"" set mouse=a  " on OSX press ALT and click
 set bs=2     " make backspace behave like normal again
 
 
@@ -123,7 +123,7 @@ set expandtab
 " Make search case insensitive
 set hlsearch
 set incsearch
-set ignorecase
+"" set ignorecase
 set smartcase
 
 
