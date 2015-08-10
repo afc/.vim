@@ -1,57 +1,57 @@
-" Sample .vimrc file by Martin Brochhaus
-" Presented at PyCon APAC 2012
+" sample .vimrc file by martin brochhaus
+" presented at pycon apac 2012
 
 
 " ============================================
-" Note to myself:
-" DO NOT USE <C-z> FOR SAVING WHEN PRESENTING!
+" note to myself:
+" do not use <c-z> for saving when presenting!
 " ============================================
 
 
-" Automatic reloading of .vimrc
+" automatic reloading of .vimrc
 autocmd! bufwritepost .vimrc source %
 
 
-" Better copy & paste
-" When you want to paste large blocks of code into vim, press F2 before you
-" paste. At the bottom you should see ``-- INSERT (paste) --``.
+" better copy & paste
+" when you want to paste large blocks of code into vim, press f2 before you
+" paste. at the bottom you should see ``-- insert (paste) --``.
 
-set pastetoggle=<F2>
+set pastetoggle=<f2>
 set clipboard=unnamed
 
 
-" Mouse and backspace
-"" set mouse=a  " on OSX press ALT and click
+" mouse and backspace
+"" set mouse=a  " on osx press alt and click
 set bs=2     " make backspace behave like normal again
 
 
-" Rebind <Leader> key
-" I like to have it here becuase it is easier to reach than the default and
-" it is next to ``m`` and ``n`` which I use for navigating between tabs.
+" rebind <leader> key
+" i like to have it here becuase it is easier to reach than the default and
+" it is next to ``m`` and ``n`` which i use for navigating between tabs.
 let mapleader = ","
 
 
-" Bind nohl
-" Removes highlight of your last search
-" ``<C>`` stands for ``CTRL`` and therefore ``<C-n>`` stands for ``CTRL+n``
-noremap <C-n> :nohl<CR>
-vnoremap <C-n> :nohl<CR>
-inoremap <C-n> :nohl<CR>
+" bind nohl
+" removes highlight of your last search
+" ``<c>`` stands for ``ctrl`` and therefore ``<c-n>`` stands for ``ctrl+n``
+noremap <c-n> :nohl<cr>
+vnoremap <c-n> :nohl<cr>
+inoremap <c-n> :nohl<cr>
 
 
-" Quicksave command
-noremap <C-Z> :update<CR>
-vnoremap <C-Z> <C-C>:update<CR>
-inoremap <C-Z> <C-O>:update<CR>
+" quicksave command
+noremap <c-z> :update<cr>
+vnoremap <c-z> <c-c>:update<cr>
+inoremap <c-z> <c-o>:update<cr>
 
 
-" Quick quit command
-"" noremap <Leader>e :quit<CR>  " Quit current window
-"" noremap <Leader>E :qa!<CR>   " Quit all windows
+" quick quit command
+"" noremap <leader>e :quit<cr>  " quit current window
+"" noremap <leader>e :qa!<cr>   " quit all windows
 
 
-" bind Ctrl+<movement> keys to move around the windows, instead of using Ctrl+w + <movement>
-" Every unnecessary keystroke that can be saved is good for your health :)
+" bind ctrl+<movement> keys to move around the windows, instead of using ctrl+w + <movement>
+" every unnecessary keystroke that can be saved is good for your health :)
 map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
@@ -59,16 +59,20 @@ map <c-h> <c-w>h
 
 
 " easier moving between tabs
-map <Leader>n <esc>:tabprevious<CR>
-map <Leader>m <esc>:tabnext<CR>
+map <leader>n <esc>:tabprevious<cr>
+map <leader>m <esc>:tabnext<cr>
+" shortcuts for new tabs
+" nnoremap :tn  :tabnew
+" nnoremap :te  :tabedit 
+cnoreabbrev <expr> te getcmdtype() == ":" && getcmdline() == 'te' ? tabedit : 'te'
 
 
 " map sort function to a key
-vnoremap <Leader>s :sort<CR>
+vnoremap <leader>s :sort<cr>
 
 
 " easier moving of code blocks
-" Try to go into visual mode (v), thenselect several lines of code here and
+" try to go into visual mode (v), thenselect several lines of code here and
 " then press ``>`` several times.
 vnoremap < <gv  " better indentation
 vnoremap > >gv  " better indentation
