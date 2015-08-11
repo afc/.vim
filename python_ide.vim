@@ -64,7 +64,7 @@ map <leader>m <esc>:tabnext<cr>
 " shortcuts for new tabs
 " nnoremap :tn  :tabnew
 " nnoremap :te  :tabedit 
-cnoreabbrev <expr> te getcmdtype() == ":" && getcmdline() == 'te' ? tabedit : 'te'
+cnoreabbrev <expr> te getcmdtype() == ":" && getcmdline() == 'te' ? 'tabedit' : 'te'
 
 
 " map sort function to a key
